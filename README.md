@@ -1,16 +1,65 @@
-# React + Vite
+# Pokedex Lite — React Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A Pokedex application built with **React**, **Axios**, and **React Router**, where users can browse Pokemon and click any Pokemon to view its detailed stats.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+- Fetches Pokémon data from the **PokeAPI**
+- Displays Pokemon in a responsive grid
+- Click any Pokemon to view full details
+- Pokemon detail page shows:
+  - Name & Image
+  - Types
+  - Height & Weight
+  - Abilities
+  - Stats
+- Clean UI with Tailwind CSS
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Technology | Usage |
+|-----------|-------|
+| **React** | Frontend framework |
+| **React Router** | Routing between Home & Detail pages |
+| **Axios** | API calls |
+| **Tailwind CSS** | UI styling |
+| **PokeAPI** | Pokemon data |
+
+---
+
+## Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/pokedex-lite.git
+
+# Go to the folder
+cd pokedex-lite
+
+# Install dependencies
+npm install
+
+# Run the app
+npm start
+
+
+## Home Page
+List of Pokmon
+Displays a paginated list of Pokemon
+Clicking on a Pokemon redirects to its detail page
+
+## Detail Page
+Displays:
+Pokemon name
+Image
+Height & Weight
+Abilities
+
+---
+
+
+
