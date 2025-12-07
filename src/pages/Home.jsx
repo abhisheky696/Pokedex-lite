@@ -63,16 +63,16 @@ const Home = () => {
     if (!selectedType) return nameMatch;
     return nameMatch && p.types.includes(selectedType);
   });
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleClick = async (id) => {
-    console.log("pokemon card is clicked",id);
+    console.log("pokemon card is clicked", id);
     navigate(`/pokemon/${id}`)
   }
   return (
     <div className="p-6 min-h-screen bg-linear-to-b from-blue-50 to-white">
       <h1 className="text-4xl font-extrabold text-center mb-8 text-blue-600 tracking-wide">
-      Pokedex Lite
+        Pokedex Lite
       </h1>
 
       <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -96,12 +96,15 @@ const Home = () => {
           ))}
         </select>
       </div>
+      {
+        filtered.length <= 0 && (<div className="text-center">No item to list</div>)
+      }
       <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
         {filtered.map((p) => (
           <li
             key={p.id}
             className="cursor-pointer bg-white rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition p-4 flex flex-col items-center relative"
-            onClick={()=> handleClick(p.id)}
+            onClick={() => handleClick(p.id)}
           >
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${p.id}.png`}
